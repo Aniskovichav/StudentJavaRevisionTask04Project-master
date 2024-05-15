@@ -45,11 +45,7 @@ public class TaskX {
             return -1;
         }
 
-        int position = (v * t) % DISTANCE;
-        if (position < 0) {
-            position += DISTANCE;
-        }
-
-        return position;
+        return (v * t) % DISTANCE < 0 ? (v * t) % DISTANCE + DISTANCE
+                                      : (v * t) % DISTANCE;
     }
 }
